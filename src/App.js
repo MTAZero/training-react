@@ -1,25 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 
+import { Question, Answers } from './components';
+
+const question = {
+    title: 'Con chó có mấy chân?',
+    answers: ['A. 1 chân', 'B. 2 chân', 'C. 3 chân', 'D. 4 chân'],
+    correct_answer: 1,
+};
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Question question={question} />
+        </div>
+    );
 }
 
 export default App;
